@@ -37,5 +37,13 @@ export class ServerService {
     );
   }
 
+  getAppName() {
+    return this.http.get('https://auth-test-32136.firebaseio.com/data.json')
+    .map(
+      (response: Response) => {
+        return response.json();
+      }
+    )
+  }
 
 }
