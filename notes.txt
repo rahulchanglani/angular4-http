@@ -8,3 +8,7 @@ db rules read write - true
 
 post req of http service creates an observable
 it wraps our configurable request
+
+
+map will take data and wrap it in new observable
+
