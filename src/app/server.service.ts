@@ -1,6 +1,7 @@
 import { Http, Headers, Response } from '@angular/http';
 import { Injectable } from '@angular/core';
-import 'rxjs/Rx'
+import 'rxjs/Rx';
+import { Observable } from 'rxjs/Observable';
 
 @Injectable()
 export class ServerService {
@@ -27,6 +28,11 @@ export class ServerService {
           server.name = 'FETCHED_' + server.name;
         }
         return data;
+      }
+    )
+    .catch(
+      (error: Response) => {
+        return Observable.throw('Something went wrong' + error);
       }
     );
   }
