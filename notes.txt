@@ -1,0 +1,10 @@
+Whenever a HTTP request is sent thru angular app... the server sends responds via same app on new requests.
+
+
+Firebase console.
+create project
+db rules read write - true
+
+
+post req of http service creates an observable
+it wraps our configurable request
